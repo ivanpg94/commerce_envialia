@@ -1,0 +1,28 @@
+commerce_envialia.settings:
+  path: /admin/commerce/config/commerce_envialia
+  defaults:
+    _title: 'Commerce Envialia'
+    _form: \Drupal\commerce_envialia\Form\CommerceEnvialiaForm
+  requirements:
+    _permission: 'administer commerce envialia'
+
+entity.commerce_order.generate_label_form_envialia:
+  path: /admin/commerce/orders/{commerce_order}/generate_label_envialia
+  defaults:
+    _form: \Drupal\commerce_envialia\Form\generatelabel
+    _title: 'Generar etiqueta Envialia'
+  options:
+    parameters:
+      commerce_order:
+        type: 'entity:commerce_order'
+  requirements:
+    _permission: 'administer commerce_order'
+
+
+entity.commerce_order.prueba:
+  path: envialia/checkout/{commerce_order}/complete
+  defaults:
+    _controller: \Drupal\commerce_envialia\Controller\urlenvialia::completado
+    _title: 'urlenvialia'
+  requirements:
+    _permission: 'administer commerce_order'

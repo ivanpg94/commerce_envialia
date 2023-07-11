@@ -1,0 +1,5 @@
+commerce_envialia.settings:
+  route_name: commerce_envialia.settings
+  title: 'Commerce Envialia'
+  description: 'Administer Commerce Envialia'
+  parent: commerce.configuration

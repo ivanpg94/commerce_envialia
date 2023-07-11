@@ -1,0 +1,54 @@
+{{ attach_library('commerce_envialia/commerce_envialia') }}
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div align="center"></div>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+<form name="form1"  onSubmit="AbrirVentana(document.form1.albaran.value)">
+  <table width="400" border="0" align="center">
+    <tr><td width="400" height="35" align="center" valign="middle"><img src="modules/custom/commerce_envialia/img/Logotipo.png" width="123" height="70"></td> </tr>
+    <tr><td width="400" height="35" align="center" valign="middle" class="Estilo4">ALBARAN DEL ENV&iacute;O</td>
+    <tr>
+      <td width="400" height="35" align="center" valign="middle"><input type="text" name="albaran" size="25" maxlength="25"></td>
+    </tr>
+    <tr>
+      <td width="400" height="35" align="center" valign="middle"><input name="button" type="button"  Value="Enviar" onClick="AbrirVentana(document.form1.albaran.value)"></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</form>
+<p>&nbsp;</p>
+
+
+<script language="javascript">
+  function envia(ref){
+    form1.albaran.value=ref;
+    alert(form1.albaran.value);
+    form1.submit();
+  }
+  function AbrirVentana(NumeroRef)
+  {
+    //if(VentanaEnvialia)
+    //{
+    //if(!VentanaEnvialia.closed)
+    //		VentanaEnvialia.close();
+    //}
+    //VentanaEnvialia=null;
+    VentanaEnvialia=window.open('devEstadoEnvialia.asp?albaran='+NumeroRef,'Ventana','menubar=no,location=no,toolbar=no,status=yes,scrollbars=auto,resizable=yes,top=50,left=50,width=400,height=370');
+  }
+</script>

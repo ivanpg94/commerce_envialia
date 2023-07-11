@@ -1,0 +1,58 @@
+<?php
+
+function commerce_envialia_theme($existing, $type, $theme, $path)
+{
+  return [
+    'block--commerce-envialia' => [
+      'variables' => [
+        'form' => [],
+      ],
+    ],
+  ];
+}
+function commerce_envialia_page_attachments(array &$attachments) {
+  // Unconditionally attach the mymodule/lrv library.
+  $attachments['#attached']['library'][] = 'commerce_envialia/commerce_envialia';
+
+}
+/*
+function commerce_envialia_preprocess(&$variables)
+{
+
+  //mostrar o ocultar el boton action de la pagina de los pedidos
+  $request = \Drupal::service('request_stack')->getCurrentRequest();
+  $requestUri = $request->getRequestUri();
+  $check = strpos($requestUri, "/orders/");
+//  dump($check);
+  $envialia = 'no_esta_envialia';
+
+  //$check = preg_match("/orders/", $requestUri);
+  if($check !== false) {
+    $orderadmincommerceenvialia = explode("orders/", $requestUri);
+    $orderadmincommerceenvialia = explode("?", $orderadmincommerceenvialia[1]);
+    $orderadmincommerceenvialia = $orderadmincommerceenvialia[0];
+
+
+    $database = \Drupal::database();
+    $query = $database->select('envialia', 'e')
+      ->condition('pedido', $orderadmincommerceenvialia)
+      ->fields('e');
+
+    $data = $query->execute()->fetchAssoc();
+    //dump($data['pedido']);
+
+    $envialia = 'no_esta_envialia';
+
+    if ($data) {
+      if (!is_null($data['pedido'])) {
+        $envialia = 'si_esta_envialia';
+      }
+    }
+  }
+  //enviar variables a javascript
+  $variables['#attached']['library'][] = 'commerce_envialia/commerce_envialia';
+  $variables['#attached']['drupalSettings']['commerce_envialia']['envialia']= $envialia;
+  //dump($variables);
+
+}
+*/

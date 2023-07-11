@@ -1,0 +1,12 @@
+entity.commerce_order.generate_label_form_envialia:
+  route_name: entity.commerce_order.generate_label_form_envialia
+  title: 'Generar etiqueta Envialia'
+  appears_on:
+    - entity.commerce_order.canonical
+  weight: -11
+  options:
+    attributes:
+      id:
+        - 'envialia'
+      class:
+        - 'envialia'

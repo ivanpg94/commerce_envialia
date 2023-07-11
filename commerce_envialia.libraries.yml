@@ -1,0 +1,17 @@
+commerce_envialia:
+  version: 1.x
+  css:
+    theme:
+      css/envialia.css: { }
+  js:
+    js/envialia.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+
+entity_print:
+  css:
+    theme:
+      css/entity-print.css: { }
+

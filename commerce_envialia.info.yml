@@ -1,0 +1,14 @@
+name: 'commerce Envialia'
+description: 'Integrates Commerce Envialia with Drupal Commerce.'
+type: module
+package: 'Commerce (contrib)'
+dependencies:
+  commerce: 'drupal:commerce'
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - commerce_envialia/commerce_envialia
+
+entity_print:
+  commerce_order:
+    all: 'commerce_envialia/print-styling'

@@ -1,0 +1,21 @@
+services:
+  commerce_envialia.iniciar_sesion:
+    class: Drupal\commerce_envialia\iniciar_sesion
+    arguments: ['@current_user']
+
+  commerce_envialia.graba_Envio:
+    class: Drupal\commerce_envialia\graba_Envio
+    arguments: ['@current_user']
+
+  commerce_envialia.consulta_Etiqueta:
+    class: Drupal\commerce_envialia\consulta_Etiqueta
+    arguments: ['@current_user']
+
+  commerce_envialia.cierra_Sesion:
+    class: Drupal\commerce_envialia\cierra_Sesion
+    arguments: ['@current_user']
+
+  commerce_envialia.consulta_Envio:
+    class: Drupal\commerce_envialia\consulta_Envio
+    arguments: ['@current_user']
+
